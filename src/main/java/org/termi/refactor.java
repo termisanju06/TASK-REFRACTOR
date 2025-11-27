@@ -63,7 +63,7 @@ public class refactor {
     private static int getSuma(int nmentero) {
         int suma = 0;
         nmentero = getNmentero();
-        for (int i = 1; i <= nmentero; i++) {
+        for (int i = 0; i <= nmentero; i++) {
             suma = suma + i;
         }
         return suma;
