@@ -64,7 +64,7 @@ public class refactor {
         int suma = 0;
         nmentero = getNmentero();
         for (int i = 1; i <= nmentero; i++) {
-            suma += i;
+            suma = suma + i;
         }
         return suma;
     }
