@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class refactor {
 
-    public static Scanner scanner;
+    public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         int opt;
@@ -38,9 +38,9 @@ public class refactor {
         System.out.println("Saliendo...");
     }
 
-    private static void printMedia(int sum) {
-        sum = getMedia(getNmentero());
-        System.out.println("La media es " + (sum));
+    private static void printMedia(double med) {
+        med = getMedia(getNmentero());
+        System.out.println("La media es " + (med));
     }
 
     private static void printSuma(int suma) {
@@ -48,8 +48,8 @@ public class refactor {
         System.out.println("El sumatorio es " + suma);
     }
 
-    private static int getMedia(int nmentero) {
-        int sum = 0;
+    private static double getMedia(int nmentero) {
+        double sum = 0;
         nmentero = getNmentero();
         for (int i = 0; i < nmentero; i++) {
             System.out.print("Introduce un número:");
@@ -80,12 +80,11 @@ public class refactor {
     }
 
     private static int getOpt() {
-        int opt;
         System.out.println("Elige una opción:");
         System.out.println("1. Sumatorio");
         System.out.println("2. Media");
         System.out.println("3. Salir");
-        opt = scanner.nextInt();
+        int opt = scanner.nextInt();
         scanner.nextLine();
         return opt;
     }
